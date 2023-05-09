@@ -12,7 +12,7 @@ type CreateUserService struct {
 	DBConnection storage.DatabaseConnection
 }
 type CreateUserServiceInterface interface {
-	CreateUser(creds entities.SignUpCredentials) (string, error)
+	CreateUser(entities.SignUpCredentials) (string, error)
 }
 
 func (service CreateUserService) CreateUser(creds entities.SignUpCredentials) (entities.User, error) {
